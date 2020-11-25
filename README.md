@@ -1,0 +1,2 @@
+# FlaskApp
+Daily Electricity Prediction
