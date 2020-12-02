@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+ Data
+{% endblock %}
+
+{% block content %}
+
+  <h1>FORECASTING APP-Compare previous years' values</h1>
+
+  <h2 id="head"> Actuals Data Fetched from last years for same day and month</h2>
+
+  <div class="tabletype"> {{ template_res | safe }} </div>
+
+  <h3 id="predv"> The predicted value:{{template_pred}}</h3>
+
+  <br>
+
+  <h2 id="dash">Link to view Data visualization</h2>
+
+  <br>
+
+  <div class="dashlink">
+  <a href="/dashapp/" class="dash-link">
+      <span>Embdedded Plotly Dash</span></a>
+  </div>
+
+  <br>
+{% endblock %}

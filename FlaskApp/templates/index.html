@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+{% block title %}
+
+{% endblock %}
+   Home
+{% block content %}
+
+  <h1>FORECASTING APP- Forecast Electricity Consumption of Victoria in day</h1>
+
+  <form action="/" method="POST">
+
+    <div id ="bordered">
+
+        <h3>Enter Minimum and Maximum Temperature </h3>
+
+        {{ template_form.hidden_tag()}}
+
+        <div class="form1">
+
+            <div>{{ template_form.Min_temp.label(class="label") }}</div>
+
+            <div>{{ template_form.Min_temp(class="box") }}</div>
+
+        </div>
+
+        <div class="form2">
+
+            <div>{{ template_form.Max_temp.label(class="label") }}</div>
+
+            <div>{{ template_form.Max_temp(class="box") }}</div>
+        </div>
+
+
+        <h4>Holiday(Holiday=1, Working day=0) </h4>
+
+        <div class="radiobutton1">
+
+            <tr>{% for btn in template_form.HF_lag %}
+
+                <td >{{ btn(class="radio") }}</td>
+
+                <td >{{ btn.label(class="label") }}</td>
+
+                {% endfor %}</tr>
+        </div>
+
+        <h4>Weekend Flag(Weekday=0, Weekend=1)</h4>
+
+        <div class="radiobutton2">
+
+                <tr>{% for btn in template_form.Wf_lag %}
+
+                  <td>{{ btn(class="radio")}}</td>
+
+                  <td>{{ btn.label(class="label") }}</td>
+
+                {% endfor %}</tr>
+
+        </div>
+
+        <h3>Enter day and month to compare the forecast with previous years</h3>
+
+        <div class="form3">
+
+                <div>{{ template_form.ma_day.label(class="label") }} </div>
+
+                <div>{{ template_form.ma_day(class="box") }}</div>
+        </div>
+
+        <div class="form4">
+
+                <div>{{ template_form.ma_mon.label(class="label") }} </div>
+
+                <div> {{ template_form.ma_mon(class="box") }}</div>
+
+        </div>
+                <div> {{ template_form.submit(class="button") }} </div>
+
+
+
+    </div>
+
+  </form>
+
+{% endblock %}
+
