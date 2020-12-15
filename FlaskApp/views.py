@@ -5,7 +5,7 @@ import pandas as pd
 import pickle
 from flask import current_app as app
 
-filename = "D://Pyl//GitHubRepo//FlaskApp//FlaskApp//model//RandomForest.pkl"
+filename = "//.//model//RandomForest.pkl"
 model = pickle.load(open(filename, 'rb'))
 
 @app.route('/', methods=["GET", "POST"])
