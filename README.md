@@ -1,4 +1,5 @@
 #### Flask Web App with embedded Dash dashboard
+![https://github.com/RammySekham/FlaskWebApp-for-ML-and-analytics/blob/main/FlaskApp/Images/app_demonstration.gif]
 ###### To run in your machine follow below commands.
        git clone <repository link>
        cd <working directory>
