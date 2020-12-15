@@ -26,7 +26,7 @@ def index():
 def data(day, mon, mtemp, matemp, h, w):
     df = pd.DataFrame([[mtemp, matemp, h, w]], columns=['MAX_TEMP', 'MIN_TEMP', 'Holiday_Flag', 'Weekened_Flag'])
     pred = model.predict(df)
-    engine = db.create_engine('sqlite:///C://Users//raman//master.db')
+    engine = db.create_engine('sqlite:///.//data//master.db')
     connection = engine.connect()
     try:
         sql_query = pd.read_sql_query(

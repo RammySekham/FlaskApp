@@ -18,7 +18,7 @@ def init_dashboard(server):
     )
 
     # Data Connection
-    engine = db.create_engine('sqlite:///C://Users//raman//master.db')
+    engine = db.create_engine('sqlite:///.//data//master.db')
     connection = engine.connect()
 
     # Get values for controls
