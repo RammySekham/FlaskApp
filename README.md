@@ -10,6 +10,9 @@
 ###### Install all the requirements
        pip install -r requirements.txt
        
+###### Flask imports the application from the place indicated by the FLASK_APP environment variable
+       Set Flask_APP = app.py
+       
 ###### Run app locally 
        flask run
        
